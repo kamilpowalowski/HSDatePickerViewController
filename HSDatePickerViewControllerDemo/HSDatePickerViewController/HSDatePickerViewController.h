@@ -74,7 +74,7 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, strong) NSDate *date;
 /**
- *  Maximum avaiable date on picker
+ *  Minimum avaiable date on picker
  */
 @property (nonatomic, strong) NSDate *minDate;
 /**
