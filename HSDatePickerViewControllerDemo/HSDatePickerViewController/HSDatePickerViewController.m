@@ -61,6 +61,15 @@ static NSInteger kBufforRows = 30; //Number of rows that are prevent by scroll p
     return self;
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    NSBundle *podbundle = [NSBundle bundleForClass:[self class]];
+    self = [super initWithNibName:nibNameOrNil bundle:podbundle];
+    if (self) {
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
