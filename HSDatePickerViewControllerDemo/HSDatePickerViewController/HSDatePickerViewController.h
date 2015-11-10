@@ -57,6 +57,14 @@ typedef enum : NSUInteger {
  *  Register your delegate here
  */
 @property (nonatomic, weak) id<HSDatePickerViewControllerDelegate> delegate;
+
+/**
+ *  This block is called when user touch confrim button.
+ *
+ *  @param date selected date and time.
+ */
+@property (nonatomic, copy) void(^pickedDateBlock)(NSDate *date);
+
 /**
  *  Indidcate that ViewController should be dismiss when there is touch outside date picker. Default is YES.
  */
