@@ -24,7 +24,7 @@ Import main header:
 When needed, create `HSDatePickerViewController` object:
 
 ```objective-c
-HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController allloc] init];
+HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
 ```
 
 present it as modal view controller:
