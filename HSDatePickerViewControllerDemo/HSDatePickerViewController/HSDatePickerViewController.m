@@ -477,12 +477,12 @@ static NSInteger kBufforRows = 30; //Number of rows that are prevent by scroll p
 
 - (IBAction)quitPicking:(id)sender {
     if ([self.delegate respondsToSelector:@selector(hsDatePickerWillDismissWithQuitMethod:)]) {
-        [self.delegate hsDatePickerWillDismissWithQuitMethod:QuitWithResult];
+        [self.delegate hsDatePickerWillDismissWithQuitMethod:QuitWithBackButton];
     }
     void (^success)(void) = nil;
     if ([self.delegate respondsToSelector:@selector(hsDatePickerDidDismissWithQuitMethod:)]) {
         success = ^{
-            [self.delegate hsDatePickerDidDismissWithQuitMethod:QuitWithResult];
+            [self.delegate hsDatePickerDidDismissWithQuitMethod:QuitWithBackButton];
         };
     }
     [self dismissViewControllerAnimated:YES completion:success];
@@ -491,12 +491,12 @@ static NSInteger kBufforRows = 30; //Number of rows that are prevent by scroll p
 - (void)cancelTapGesture:(UITapGestureRecognizer *)sender {
     if (self.shouldDismissOnCancelTouch) {
         if ([self.delegate respondsToSelector:@selector(hsDatePickerWillDismissWithQuitMethod:)]) {
-            [self.delegate hsDatePickerWillDismissWithQuitMethod:QuitWithResult];
+            [self.delegate hsDatePickerWillDismissWithQuitMethod:QuitWithCancel];
         }
         void (^success)(void) = nil;
         if ([self.delegate respondsToSelector:@selector(hsDatePickerDidDismissWithQuitMethod:)]) {
             success = ^{
-                [self.delegate hsDatePickerDidDismissWithQuitMethod:QuitWithResult];
+                [self.delegate hsDatePickerDidDismissWithQuitMethod:QuitWithCancel];
             };
         }
         [self dismissViewControllerAnimated:YES completion:success];

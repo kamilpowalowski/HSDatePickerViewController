@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HSDatePickerViewController"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Customizable iOS view controller in Mailbox app style for picking date and time."
 
   s.description  = <<-DESC
