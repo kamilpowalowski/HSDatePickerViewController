@@ -463,6 +463,10 @@ static NSInteger kBufforRows = 30; //Number of rows that are prevent by scroll p
         [self.delegate hsDatePickerPickedDate:[self dateWithSelectedTime]];
     }
     
+    if (self.pickedDateBlock) {
+        self.pickedDateBlock([self dateWithSelectedTime]);
+    }
+    
     if ([self.delegate respondsToSelector:@selector(hsDatePickerWillDismissWithQuitMethod:)]) {
         [self.delegate hsDatePickerWillDismissWithQuitMethod:QuitWithResult];
     }
