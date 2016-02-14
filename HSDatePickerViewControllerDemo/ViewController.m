@@ -26,7 +26,7 @@
 }
 
 - (IBAction)showDatePicker:(id)sender {
-    HSDatePickerViewController *hsdpvc = [HSDatePickerViewController new];
+    HSDatePickerViewController *hsdpvc = [[HSDatePickerViewController alloc] init];
     hsdpvc.delegate = self;
     if (self.selectedDate) {
         hsdpvc.date = self.selectedDate;
